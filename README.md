@@ -4,7 +4,9 @@ Minigame.
 
 ## Demo
 
-...
+![Lights Out demo screenshot image.](lightsout-screenshot.png)
+
+Try it [here](https://eyla-mckay.github.io/Lights-Out/).
 
 ## About
 
