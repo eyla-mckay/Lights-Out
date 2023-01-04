@@ -1,0 +1,33 @@
+<!-- Lights On (Lights Out variant)
+     Eyla McKaye
+     2022-08-15 -->
+
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8"/>
+    <meta name="viewport" content="width=device-width"/>
+    <script src="index.js" defer></script>
+    <link href="styles.css" rel="stylesheet">
+    <title>Lights Out</title>
+</head>
+
+<body>
+
+    <!-- script-generated grid -->
+    <div id="gridContainer"></div>
+
+    <!-- toggle functionalities display -->
+    <input id="toggler" type="button" onclick="toggle()" value="Show/hide functionalities"/>
+
+    <!-- working functionalities (logs) -->
+    <div id="functionalities" style="display:block;">
+        <input type="button" onclick="randomise()" value="randomise"/>
+        <pre id="display"></pre>
+        <pre id="logNotes"></pre>
+    </div>
+
+</body>
+
+</html>

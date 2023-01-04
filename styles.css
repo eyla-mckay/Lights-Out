@@ -1,0 +1,31 @@
+div {
+    outline: 1px solid black;
+    padding: 10px;
+}
+
+#gridContainer {
+    display: grid;
+    gap: 10px;
+    background-color: gray;
+  }
+
+.gridElement {
+    outline: 1px solid black;
+    font-family: 'Courier New', Courier, monospace;
+    font-size: small;
+    text-align: center;
+    vertical-align: middle; /* ???? */
+}
+
+#toggler {
+    padding: 10px;
+}
+
+#logNotes {
+    outline: 1px solid black;
+    width: 540px;
+    height: 200px;
+    overflow-y: scroll;
+    scrollbar-color: gray lightgrey;
+    scrollbar-width: thin;
+}
