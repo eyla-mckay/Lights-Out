@@ -1,9 +1,10 @@
-// grid size
-var size = 5;
-
-// build a grid of n x n input elements
+// MAIN
+var size = 5; // grid size
 var gridContainer = document.getElementById("gridContainer");
 gridContainer.innerHTML = makeGrid(size);
+attributeValues();
+
+// build a grid of n x n input elements
 function makeGrid(n) {
     // update grid container template layout
     let layout = ""
@@ -27,7 +28,6 @@ function makeGrid(n) {
 }
 
 // set all lights to black
-attributeValues();
 function attributeValues() {
     for (i = 0; i < size; i++) { // for each row
         for (j = 0; j < size; j++) { // for each column
@@ -36,15 +36,14 @@ function attributeValues() {
             contentId.style.color = "grey";
         }
     }
-    debugLog(`│- ...done.`)
-    return result;
+    debugLog(`│- ...done.`);
 }
 
 // trigger when pressing a light
 function press(x,y,ignoreLogs) {
     ignoreLogs = ignoreLogs || false;
     if (!ignoreLogs) {
-        debugLog(`Pressing at coordinates (${x},${y}).`);
+        debugLog(`Pressing at coordinates (${x},${y}):`);
     }
     flip(x,y); // centre
     if (x>0) {
@@ -63,7 +62,7 @@ function press(x,y,ignoreLogs) {
 
 // flip light at coordinates
 function flip(x,y) {
-    debugLog(`| |- Flipping at coordinates (${x},${y}):`);
+    debugLog(`| |- Flipping at coordinates (${x},${y})`);
     let contentId = document.getElementById(`gridElement${x}${y}`);
     if (contentId.style.backgroundColor == "yellow") {
         contentId.style.backgroundColor = "black";
