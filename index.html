@@ -10,6 +10,7 @@
     <meta name="viewport" content="width=device-width"/>
     <script src="index.js" defer></script>
     <link href="styles.css" rel="stylesheet">
+    <link rel="icon" type="image/x-icon" href="/img/favicon.ico">
     <title>Lights Out</title>
 </head>
 
@@ -19,11 +20,11 @@
     <div id="gridContainer"></div>
 
     <!-- toggle functionalities display -->
-    <input id="toggler" type="button" onclick="toggle()" value="Show/hide functionalities"/>
+    <input type="button" class="button" onclick="toggle()" value="Show/hide log"/>
+    <input type="button" class="button" onclick="randomise()" value="Randomise"/>
 
     <!-- working functionalities (logs) -->
-    <div id="functionalities" style="display:block;">
-        <input type="button" onclick="randomise()" value="randomise"/>
+    <div id="functionalities" style="display:none;">
         <pre id="display"></pre>
         <pre id="logNotes"></pre>
     </div>

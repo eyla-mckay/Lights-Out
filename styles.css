@@ -1,12 +1,19 @@
 div {
     outline: 1px solid black;
+    border-radius: 1%;
+    width: fit-content;
+}
+
+.button {
     padding: 10px;
+    margin: 10px;
 }
 
 #gridContainer {
     display: grid;
-    gap: 10px;
-    background-color: gray;
+    gap: 5px;
+    padding: 10px;
+    background-color: lightgrey;
   }
 
 .gridElement {
@@ -14,18 +21,20 @@ div {
     font-family: 'Courier New', Courier, monospace;
     font-size: small;
     text-align: center;
+    border-radius: 5%;
     vertical-align: middle; /* ???? */
 }
 
-#toggler {
+#functionalities {
+    background-color: lightgrey;
     padding: 10px;
 }
 
 #logNotes {
-    outline: 1px solid black;
-    width: 540px;
+    outline: none;
     height: 200px;
     overflow-y: scroll;
     scrollbar-color: gray lightgrey;
     scrollbar-width: thin;
+    background-color: white;
 }

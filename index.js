@@ -1,6 +1,7 @@
 // MAIN
 var size = 5; // grid size
 var gridContainer = document.getElementById("gridContainer");
+clearLog();
 gridContainer.innerHTML = makeGrid(size);
 attributeValues();
 
@@ -83,6 +84,7 @@ function toggle() {
 
 // press n random lights
 function randomise() {
+    clearLog();
     let n = size*2;
     debugLog(`Randomising (${n} presses)...:`);
     let i = 0;
@@ -95,12 +97,16 @@ function randomise() {
     debugLog(`|- ...randomisation done.`);
 }
 
-// DEBUG TOOLS
+// *** DEBUG TOOLS ***
 
 // process logger (debug)
-document.getElementById("logNotes").innerHTML = `LOG:<br/>`
 function debugLog(string) {
     document.getElementById("logNotes").innerHTML += string+`<br/>`;
+}
+
+// log clearer (debug)
+function clearLog(string) {
+    document.getElementById("logNotes").innerHTML = `LOG:<br/><input type="button" onclick="clearLog()" value="Clear"/><br />`;
 }
 
 // display array of values (debug)
@@ -126,3 +132,5 @@ function xyToNum (x,y) {
     let num = (x)*5+y;
     return num;
 }
+
+
